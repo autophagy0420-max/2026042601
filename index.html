@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘의 급식 - 스마트 식단표</title>
+    <meta name="description" content="우리 학교의 맛있는 급식 정보를 확인해보세요. 날짜별 메뉴, 칼로리, 원산지 정보를 제공합니다.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1 id="app-title">🍽️ 오늘의 급식</h1>
+            <p class="school-info" id="school-name">학교 정보를 불러오는 중...</p>
+        </header>
+
+        <section class="date-selector">
+            <div class="date-input-wrapper">
+                <label for="meal-date">날짜 선택</label>
+                <input type="date" id="meal-date">
+            </div>
+        </section>
+
+        <main id="meal-results">
+            <!-- Meal cards will be injected here by script.js -->
+            <div class="loading">
+                <div class="spinner"></div>
+                <p>급식 정보를 가져오고 있습니다...</p>
+            </div>
+        </main>
+
+        <footer>
+            <p style="text-align: center; font-size: 0.7rem; color: var(--text-muted); margin-top: 20px;">
+                © 2026 School Meal Tracker. Data provided by NEIS Open API.
+            </p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
